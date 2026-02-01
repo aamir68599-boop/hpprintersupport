@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- ✅ VERY IMPORTANT FOR MOBILE & TABLET -->
+<!-- IMPORTANT FOR MOBILE -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>HP Printer Support</title>
@@ -23,27 +23,22 @@
         height: 100%;
     }
 
-    img {
+    picture, img {
         width: 100%;
         height: 100%;
         display: block;
         cursor: pointer;
-        object-fit: cover; /* Desktop & Laptop */
     }
 
-    /* 📱 Mobile phones */
-    @media (max-width: 768px) {
-        img {
-            object-fit: contain; /* poori image dikhe */
-            background-color: #ffffff;
-        }
+    img {
+        object-fit: cover; /* Desktop / Laptop */
     }
 
-    /* 📱 Tablets */
-    @media (min-width: 769px) and (max-width: 1024px) {
+    /* Mobile & Tablet */
+    @media (max-width: 1024px) {
         img {
             object-fit: contain;
-            background-color: #ffffff;
+            background: #ffffff;
         }
     }
 </style>
@@ -52,7 +47,14 @@
 <body>
 
 <a href="https://www.hp.com" target="_blank">
-    <img src="image.png" alt="HP Printer Support">
+    <picture>
+        <!-- 📱 Mobile image -->
+        <source media="(max-width: 768px)" 
+                srcset="https://hilarious-fenglisu-18da22.netlify.app/image2.jpeg">
+
+        <!-- 💻 Desktop / Tablet image -->
+        <img src="image.png" alt="HP Printer Support">
+    </picture>
 </a>
 
 </body>
