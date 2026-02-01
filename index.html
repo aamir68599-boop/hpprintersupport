@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- IMPORTANT FOR MOBILE -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>HP Printer Support</title>
@@ -31,11 +30,11 @@
     }
 
     img {
-        object-fit: cover; /* Desktop / Laptop */
+        object-fit: cover; /* Laptop / Desktop */
     }
 
-    /* Mobile & Tablet */
-    @media (max-width: 1024px) {
+    /* Mobile */
+    @media (max-width: 768px) {
         img {
             object-fit: contain;
             background: #ffffff;
@@ -49,11 +48,10 @@
 <a href="https://www.hp.com" target="_blank">
     <picture>
         <!-- 📱 Mobile image -->
-        <source media="(max-width: 768px)" 
-                srcset="https://hilarious-fenglisu-18da22.netlify.app/image2.jpeg">
+        <source media="(max-width: 768px)" srcset="image3.png">
 
-        <!-- 💻 Desktop / Tablet image -->
-        <img src="image.png" alt="HP Printer Support">
+        <!-- 💻 Laptop / Desktop image -->
+        <img src="image (1).png" alt="HP Printer Support">
     </picture>
 </a>
 
